@@ -13,6 +13,11 @@
 
 # ENV
 /.env
+
+# General
+/.vscode
+/Mookup.jpeg
+
 # misc
 .DS_Store
 .env.local
