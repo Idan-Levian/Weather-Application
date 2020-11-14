@@ -12,4 +12,5 @@ const Template = (args) => <Subtitle {...args} />;
 export const Default = Template.bind({});
 Default.args = {
   date: '11.12.13 Nice Day',
+  size: '25px',
 };
