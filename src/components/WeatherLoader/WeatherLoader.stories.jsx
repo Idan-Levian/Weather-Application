@@ -11,4 +11,6 @@ const Template = (args) => <WeatherLoader {...args} />;
 export const Default = Template.bind({});
 Default.args = {
   text: 'LOOKING OUTSIDE FOR YOU... ONE SEC',
+  cloudColor: '#FFFEF4',
+  sunColor: '#FFEF0F',
 };

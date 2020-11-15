@@ -31,7 +31,7 @@ const LoaderWeather = styled.div.attrs((props) => ({
   }
 
   #cloud path {
-    fill: #efefef;
+    fill: ${({ cloudColor }) => cloudColor};
   }
 
   #sun {
@@ -53,7 +53,7 @@ const LoaderWeather = styled.div.attrs((props) => ({
 
   #sun path {
     stroke-width: 0.18;
-    fill: #9ea1a4;
+    fill: ${({ sunColor }) => sunColor};
   }
 
   @keyframes rotate {
@@ -159,9 +159,13 @@ const LoaderWeather = styled.div.attrs((props) => ({
   }
 `;
 
-const WeatherLoader = ({ text }) => {
+const WeatherLoader = ({ text, sunColor, cloudColor }) => {
   return (
-    <LoaderWeather style={{ opacity: 1 }}>
+    <LoaderWeather
+      style={{ opacity: 1 }}
+      sunColor={sunColor}
+      cloudColor={cloudColor}
+    >
       <svg
         version='1.1'
         id='sun'
