@@ -1,5 +1,6 @@
+/* eslint-disable import/no-anonymous-default-export */
+
 import React from 'react';
-import Loader from '../Loader/Loader';
 import Box from './Box';
 
 export default {
