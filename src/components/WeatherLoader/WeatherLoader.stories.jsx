@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 import React from 'react';
 import WeatherLoader from './WeatherLoader';
 
@@ -11,6 +12,6 @@ const Template = (args) => <WeatherLoader {...args} />;
 export const Default = Template.bind({});
 Default.args = {
   text: 'LOOKING OUTSIDE FOR YOU... ONE SEC',
-  cloudColor: '#FFFEF4',
-  sunColor: '#FFEF0F',
+  cloudColor: 'lightyellow',
+  sunColor: 'yellow',
 };
