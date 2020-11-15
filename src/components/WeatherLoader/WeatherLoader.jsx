@@ -13,18 +13,16 @@ const WeatherLoader = ({ text, sunColor, cloudColor }) => {
       <Cloud />
       <Sun />
       <S.Rain>
-        <S.Drop>
-          <span className='drop'></span>
-          <span className='drop'></span>
-          <span className='drop'></span>
-          <span className='drop'></span>
-          <span className='drop'></span>
-          <span className='drop'></span>
-          <span className='drop'></span>
-          <span className='drop'></span>
-          <span className='drop'></span>
-          <span className='drop'></span>
-        </S.Drop>
+        <S.Drop></S.Drop>
+        <S.Drop></S.Drop>
+        <S.Drop></S.Drop>
+        <S.Drop></S.Drop>
+        <S.Drop></S.Drop>
+        <S.Drop></S.Drop>
+        <S.Drop></S.Drop>
+        <S.Drop></S.Drop>
+        <S.Drop></S.Drop>
+        <S.Drop></S.Drop>
       </S.Rain>
 
       <S.Text>{text}</S.Text>

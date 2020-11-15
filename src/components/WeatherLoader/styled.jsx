@@ -1,58 +1,56 @@
 import styled from 'styled-components';
 
 export const Drop = styled.span`
-  .drop {
-    opacity: 1;
-    background: #9ea1a4;
-    display: block;
-    float: left;
-    width: 3px;
-    height: 10px;
-    margin-left: 4px;
-    border-radius: 0px 0px 6px 6px;
+  opacity: 1;
+  background: #9ea1a4;
+  display: block;
+  float: left;
+  width: 3px;
+  height: 10px;
+  margin-left: 4px;
+  border-radius: 0px 0px 6px 6px;
 
-    animation-name: drop;
-    animation-duration: 350ms;
-    animation-iteration-count: infinite;
-  }
+  animation-name: drop;
+  animation-duration: 350ms;
+  animation-iteration-count: infinite;
 
-  .drop:nth-child(1) {
+  &:nth-child(1) {
     animation-delay: -130ms;
   }
 
-  .drop:nth-child(2) {
+  &:nth-child(2) {
     animation-delay: -240ms;
   }
 
-  .drop:nth-child(3) {
+  &:nth-child(3) {
     animation-delay: -390ms;
   }
 
-  .drop:nth-child(4) {
+  &:nth-child(4) {
     animation-delay: -525ms;
   }
 
-  .drop:nth-child(5) {
+  &:nth-child(5) {
     animation-delay: -640ms;
   }
 
-  .drop:nth-child(6) {
+  &:nth-child(6) {
     animation-delay: -790ms;
   }
 
-  .drop:nth-child(7) {
+  &:nth-child(7) {
     animation-delay: -900ms;
   }
 
-  .drop:nth-child(8) {
+  &:nth-child(8) {
     animation-delay: -1050ms;
   }
 
-  .drop:nth-child(9) {
+  &:nth-child(9) {
     animation-delay: -1130ms;
   }
 
-  .drop:nth-child(10) {
+  &:nth-child(10) {
     animation-delay: -1300ms;
   }
 
