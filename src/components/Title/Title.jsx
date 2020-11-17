@@ -1,16 +1,11 @@
 import React from 'react';
-
-import styled from 'styled-components';
-
-const Header = styled.h1`
-  font-family: 'Montserrat', sans-serif;
-`;
+import * as S from './style';
 
 const Title = ({ city, country }) => {
   return (
-    <Header>
+    <S.Title>
       {city}, {country}
-    </Header>
+    </S.Title>
   );
 };
 

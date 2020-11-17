@@ -1,13 +1,8 @@
 import React from 'react';
-import styled from 'styled-components';
-
-const IconDisplay = styled.img`
-  height: ${({ height }) => height};
-  width: ${({ width }) => width};
-`;
+import * as S from './style';
 
 const Icon = ({ src, width, height }) => {
-  return <IconDisplay width={width} height={height} src={src}></IconDisplay>;
+  return <S.Icon width={width} height={height} src={src}></S.Icon>;
 };
 
 export default Icon;
