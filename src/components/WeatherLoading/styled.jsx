@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import * as H from './helpers';
 
 export const Drop = styled.span`
   opacity: 1;
@@ -14,45 +15,7 @@ export const Drop = styled.span`
   animation-duration: 350ms;
   animation-iteration-count: infinite;
 
-  &:nth-child(1) {
-    animation-delay: -130ms;
-  }
-
-  &:nth-child(2) {
-    animation-delay: -240ms;
-  }
-
-  &:nth-child(3) {
-    animation-delay: -390ms;
-  }
-
-  &:nth-child(4) {
-    animation-delay: -525ms;
-  }
-
-  &:nth-child(5) {
-    animation-delay: -640ms;
-  }
-
-  &:nth-child(6) {
-    animation-delay: -790ms;
-  }
-
-  &:nth-child(7) {
-    animation-delay: -900ms;
-  }
-
-  &:nth-child(8) {
-    animation-delay: -1050ms;
-  }
-
-  &:nth-child(9) {
-    animation-delay: -1130ms;
-  }
-
-  &:nth-child(10) {
-    animation-delay: -1300ms;
-  }
+  ${H.dropsAnimations()}
 
   @keyframes drop {
     50% {
@@ -95,7 +58,7 @@ export const Text = styled.div.attrs((props) => ({
   width: 200px;
 `;
 
-export const WeatherLoader = styled.div.attrs((props) => ({
+export const WeatherLoading = styled.div.attrs((props) => ({
   className: 'preloader',
 }))`
   .preloader {
