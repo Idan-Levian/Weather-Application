@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import * as H from './helpers';
 
 export const Drop = styled.span.attrs(() => ({
   className: 'drop',
@@ -43,7 +42,32 @@ export const Rain = styled.div.attrs(() => ({
   margin-top: -32px;
   margin-left: 19px;
 
-  ${(props) => H.dropsAnimations(props.children)}
+  ${({ children }) => {
+    const durations = [
+      '-130ms',
+      '-240ms',
+      '-390ms',
+      '-525ms',
+      '-640ms',
+      '-790ms',
+      '-900ms',
+      '-1050ms',
+      '-1130ms',
+      '-1300ms',
+    ];
+
+    let str = '';
+
+    children.map((child, runner) => {
+      str += `
+        .drop:nth-child(${parseInt(child.key) + 1}) {
+          animation-delay: ${durations[runner]};
+         }
+      `;
+      return str;
+    });
+    return str;
+  }}
 `;
 
 export const Text = styled.div.attrs(() => ({
@@ -125,5 +149,3 @@ export const WeatherLoading = styled.div.attrs(() => ({
     }
   }
 `;
-
-// ${(props) => console.log(typeof parseInt(props.children[0].key))}

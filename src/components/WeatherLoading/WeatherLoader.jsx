@@ -2,7 +2,14 @@ import React from 'react';
 import Cloud from '../assets/icons/Cloud';
 import Sun from '../assets/icons/Sun';
 import * as S from './styled';
-import * as H from './helpers';
+
+const dropsPrinter = (runner) => {
+  const drops = [];
+  for (let index = 0; index < runner; index++) {
+    drops.push(<S.Drop key={index}></S.Drop>);
+  }
+  return drops;
+};
 
 const WeatherLoading = ({ text, sunColor, cloudColor }) => {
   return (
@@ -13,7 +20,7 @@ const WeatherLoading = ({ text, sunColor, cloudColor }) => {
     >
       <Cloud />
       <Sun />
-      <S.Rain>{H.dropsPrinter(10)}</S.Rain>
+      <S.Rain>{dropsPrinter(10)}</S.Rain>
 
       <S.Text>{text}</S.Text>
     </S.WeatherLoading>
