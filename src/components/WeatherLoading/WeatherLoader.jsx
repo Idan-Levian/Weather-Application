@@ -13,7 +13,7 @@ const WeatherLoading = ({ text, sunColor, cloudColor }) => {
     >
       <Cloud />
       <Sun />
-      <S.Rain>{H.dropsPrinter()}</S.Rain>
+      <S.Rain>{H.dropsPrinter(10)}</S.Rain>
 
       <S.Text>{text}</S.Text>
     </S.WeatherLoading>

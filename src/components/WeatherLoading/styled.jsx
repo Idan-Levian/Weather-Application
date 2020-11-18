@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 import * as H from './helpers';
 
-export const Drop = styled.span`
+export const Drop = styled.span.attrs(() => ({
+  className: 'drop',
+}))`
   opacity: 1;
   background: #9ea1a4;
   display: block;
@@ -14,8 +16,6 @@ export const Drop = styled.span`
   animation-name: drop;
   animation-duration: 350ms;
   animation-iteration-count: infinite;
-
-  ${H.dropsAnimations()}
 
   @keyframes drop {
     50% {
@@ -34,7 +34,7 @@ export const Drop = styled.span`
   }
 `;
 
-export const Rain = styled.div.attrs((props) => ({
+export const Rain = styled.div.attrs(() => ({
   className: 'rain',
 }))`
   position: absolute;
@@ -42,9 +42,11 @@ export const Rain = styled.div.attrs((props) => ({
   height: 70px;
   margin-top: -32px;
   margin-left: 19px;
+
+  ${(props) => H.dropsAnimations(props.children)}
 `;
 
-export const Text = styled.div.attrs((props) => ({
+export const Text = styled.div.attrs(() => ({
   className: 'text',
 }))`
   font-family: Helvetica, 'Helvetica Neue', sans-serif;
@@ -58,7 +60,7 @@ export const Text = styled.div.attrs((props) => ({
   width: 200px;
 `;
 
-export const WeatherLoading = styled.div.attrs((props) => ({
+export const WeatherLoading = styled.div.attrs(() => ({
   className: 'preloader',
 }))`
   .preloader {
@@ -123,3 +125,5 @@ export const WeatherLoading = styled.div.attrs((props) => ({
     }
   }
 `;
+
+// ${(props) => console.log(typeof parseInt(props.children[0].key))}

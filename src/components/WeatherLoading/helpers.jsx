@@ -1,21 +1,23 @@
 import * as S from './styled';
 
-export const dropsPrinter = () => {
+export const dropsPrinter = (runner) => {
   const drops = [];
-  for (let index = 0; index <= 10; index++) {
-    drops.push(<S.Drop></S.Drop>);
+  for (let index = 0; index < runner; index++) {
+    drops.push(<S.Drop key={index}></S.Drop>);
   }
   return drops;
 };
 
 const dropAnimationsStyle = (i, duration) => {
+  var stringToInt = parseInt(i);
   return `
-        &:nth-child(${i + 1}) {
+        .drop:nth-child(${stringToInt + 1}) {
           animation-delay: ${duration};
          }
       `;
 };
-export const dropsAnimations = () => {
+
+export const dropsAnimations = (index) => {
   const durations = [
     '-130ms',
     '-240ms',
@@ -29,8 +31,8 @@ export const dropsAnimations = () => {
     '-1300ms',
   ];
   let str = '';
-  for (let index = 0; index < 10; index += 1) {
-    str += dropAnimationsStyle(index, durations[index]);
+  for (let runner = 0; runner < index.length; runner++) {
+    str += dropAnimationsStyle(index[runner].key, durations[runner]);
   }
   return str;
 };
