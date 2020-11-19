@@ -1,13 +1,13 @@
 /* eslint-disable import/no-anonymous-default-export */
 import React from 'react';
-import WeatherLoader from './WeatherLoader';
+import WeatherLoading from './';
 
 export default {
-  title: 'Weather Loader',
-  component: WeatherLoader,
+  title: 'Weather Loading',
+  component: WeatherLoading,
 };
 
-const Template = (args) => <WeatherLoader {...args} />;
+const Template = (args) => <WeatherLoading {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

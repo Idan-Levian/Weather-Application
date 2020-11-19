@@ -8,7 +8,7 @@ const Sun = () => {
       width='10px'
       height='10px'
       viewBox='0 0 10 10'
-      enable-background='new 0 0 10 10'
+      enableBackground='new 0 0 10 10'
     >
       <path
         fill='none'

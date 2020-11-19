@@ -1,3 +1,3 @@
-import WeatherLoading from './';
+import WeatherLoading from './WeatherLoading';
 
 export default WeatherLoading;

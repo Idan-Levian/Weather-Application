@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
-export const Drop = styled.span.attrs(() => ({
-  className: 'drop',
-}))`
+export const Drop = styled.span(({ orderNumber, duration }) => {
+  return `
   opacity: 1;
   background: #9ea1a4;
   display: block;
@@ -15,6 +14,10 @@ export const Drop = styled.span.attrs(() => ({
   animation-name: drop;
   animation-duration: 350ms;
   animation-iteration-count: infinite;
+
+  &:nth-child(${orderNumber}){
+    animation-delay:${duration}
+  }
 
   @keyframes drop {
     50% {
@@ -32,47 +35,31 @@ export const Drop = styled.span.attrs(() => ({
     }
   }
 `;
+});
 
-export const Rain = styled.div.attrs(() => ({
-  className: 'rain',
-}))`
+export const Rain = styled.div`
   position: absolute;
   width: 70px;
   height: 70px;
   margin-top: -32px;
   margin-left: 19px;
 
-  ${({ children }) => {
-    const durations = [
-      '-130ms',
-      '-240ms',
-      '-390ms',
-      '-525ms',
-      '-640ms',
-      '-790ms',
-      '-900ms',
-      '-1050ms',
-      '-1130ms',
-      '-1300ms',
-    ];
-
+  /* ${({ children }) => {
     let str = '';
 
-    children.map((child, runner) => {
+    children.map((child) => {
       str += `
-        .drop:nth-child(${parseInt(child.key) + 1}) {
-          animation-delay: ${durations[runner]};
+      ${Drop}:nth-child(${parseInt(child.key)}) {
+          animation-delay: ${child.props.duration};
          }
       `;
       return str;
     });
     return str;
-  }}
+  }} */
 `;
 
-export const Text = styled.div.attrs(() => ({
-  className: 'text',
-}))`
+export const Text = styled.div`
   font-family: Helvetica, 'Helvetica Neue', sans-serif;
   letter-spacing: 1px;
   text-align: center;
@@ -84,18 +71,14 @@ export const Text = styled.div.attrs(() => ({
   width: 200px;
 `;
 
-export const WeatherLoading = styled.div.attrs(() => ({
-  className: 'preloader',
-}))`
-  .preloader {
-    position: absolute;
-    margin-left: -55px;
-    margin-top: -100px;
-    height: 110px;
-    width: 110px;
-    left: 50%;
-    top: 50%;
-  }
+export const WeatherLoading = styled.div`
+  position: absolute;
+  margin-left: -55px;
+  margin-top: -100px;
+  height: 110px;
+  width: 110px;
+  left: 50%;
+  top: 50%;
 
   svg {
     width: 110px;
