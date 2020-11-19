@@ -4,7 +4,7 @@ import React from 'react';
 import TransparentBox from './TransparentBox';
 
 export default {
-  title: 'Box',
+  title: 'TransparentBox',
   component: TransparentBox,
 };
 

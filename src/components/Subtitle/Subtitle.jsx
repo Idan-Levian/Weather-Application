@@ -1,10 +1,10 @@
 import React from 'react';
 import * as S from './style';
 
-const Subtitle = ({ size, date, color = '#a3a09b' }) => {
+const Subtitle = ({ size, text, color = '#a3a09b' }) => {
   return (
     <S.Subtitle color={color} size={size}>
-      {date}
+      {text}
     </S.Subtitle>
   );
 };
