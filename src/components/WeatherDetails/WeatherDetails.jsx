@@ -7,7 +7,7 @@ import Subtitle from '../Subtitle';
 
 const WeatherDetails = () => {
   return (
-    <TransparentBox opacity='0.15' color='gray'>
+    <TransparentBox opacity='0.15' color='gray' width='50%'>
       <S.UL>
         <S.LI>
           <Subtitle text='6&deg;' />

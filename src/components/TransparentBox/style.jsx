@@ -3,8 +3,8 @@ import colorConvert from 'color-convert';
 
 export const TransparentBox = styled.div`
   position: relative;
-  width: 50%;
-  height: 50%;
+  display: table;
+  width: ${({ width }) => (width ? width : 'auto')};
   border: 1px solid black;
   background-color: rgba(
     ${({ color }) =>
