@@ -10,4 +10,11 @@ export default {
 const Template = (args) => <WeatherCard {...args} />;
 
 export const Default = Template.bind({});
-Default.args = {};
+Default.args = {
+  color: 'lightgray',
+  opacity: 0.2,
+  text1: 'text1',
+  text2: 'text2',
+  src: `https://apidev.accuweather.com/developers/Media/Default/WeatherIcons/14-s.png`,
+  text3: 'text3',
+};

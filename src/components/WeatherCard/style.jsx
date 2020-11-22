@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
 export const Card = styled.div`
-  display: table-row;
+  margin-right: 3.5%;
+  display: inline-block;
 `;
