@@ -11,6 +11,5 @@ const Template = (args) => <Title {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  city: 'Tel Aviv',
-  country: 'IL',
+  text: 'Tel Aviv, IL',
 };
