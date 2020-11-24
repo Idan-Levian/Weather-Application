@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const List = styled.div`
-  border: 1px solid black;
-  padding: 1%;
+  border: 0.1rem solid black;
+  padding: 1rem;
   display: flex;
   justify-content: center;
 `;
