@@ -5,6 +5,5 @@ export const Subtitle = styled.span`
   font-family: 'Montserrat', sans-serif;
   color: ${({ color }) => color};
   display: block;
-  text-align: center;
-  padding: 1.7%;
+  /* padding: 1.7%; */
 `;

@@ -16,21 +16,21 @@ const CurrentWeather = ({
   height,
 }) => {
   return (
-    <S.CurrentWeather>
+    <S.CurrentWeatherContainer>
       <S.CurrentWeatherHeader>
         <Title text={headerTitleText} />
         <Subtitle text={headerSubtitleText} />
       </S.CurrentWeatherHeader>
       <S.CurrentWeatherBody>
-        <div style={{ float: 'right' }}>
+        <div>
           <Title text={bodyTitleText} />
           <Subtitle text={bodySubtitleText} />
         </div>
-        <div style={{ float: 'right' }}>
+        <div>
           <Icon width={width} height={height} src={src} />
         </div>
       </S.CurrentWeatherBody>
-    </S.CurrentWeather>
+    </S.CurrentWeatherContainer>
   );
 };
 

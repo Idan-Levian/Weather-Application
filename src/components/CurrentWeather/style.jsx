@@ -1,16 +1,15 @@
 import styled from 'styled-components';
-import Icon from '../Icon';
 
-export const CurrentWeather = styled.div`
+export const CurrentWeatherContainer = styled.div`
   max-width: inherit;
+  display: flex;
+  flex-direction: column;
 `;
 
 export const CurrentWeatherHeader = styled.div`
-  display: inline-block;
-  justify-items: left;
-  margin-bottom: 7.5%;
+  align-self: flex-start;
 `;
 
 export const CurrentWeatherBody = styled.div`
-  clear: both;
+  align-self: flex-end;
 `;
