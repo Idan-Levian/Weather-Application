@@ -1,14 +1,14 @@
 /* eslint-disable import/no-anonymous-default-export */
 
 import React from 'react';
-import TransparentBox from './TransparentBox';
+import Backdrop from './Backdrop';
 
 export default {
-  title: 'TransparentBox',
-  component: TransparentBox,
+  title: 'Backdrop',
+  component: Backdrop,
 };
 
-const Template = (args) => <TransparentBox {...args} />;
+const Template = (args) => <Backdrop {...args} />;
 export const Default = Template.bind({});
 Default.args = {
   color: 'lightgray',

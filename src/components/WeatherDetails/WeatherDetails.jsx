@@ -2,12 +2,12 @@ import React from 'react';
 import * as S from './style';
 
 /* Import Components */
-import TransparentBox from '../TransparentBox';
+import Backdrop from '../Backdrop';
 import Subtitle from '../Subtitle';
 
 const WeatherDetails = () => {
   return (
-    <TransparentBox opacity='0.15' color='gray'>
+    <Backdrop opacity='0.15' color='gray' width='50%'>
       <S.UL>
         <S.LI>
           <Subtitle text='6&deg;' />
@@ -34,7 +34,7 @@ const WeatherDetails = () => {
           <Subtitle text='Sunset' />
         </S.LI>
       </S.UL>
-    </TransparentBox>
+    </Backdrop>
   );
 };
 
