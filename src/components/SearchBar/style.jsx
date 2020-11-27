@@ -1,18 +1,34 @@
 import styled from 'styled-components';
 
-export const Input = styled.input`
-  padding-left: 12px;
-  border-radius: 12px;
+export const SearchBar = styled.form`
+  position: relative;
   margin: auto;
-  display: inline-block;
-  border: 1px solid black;
-  box-sizing: border-box;
-  width: 50%;
-  height: 42px;
-  font-size: 14px;
-  font-family: 'Montserrat', sans-serif;
+`;
+
+export const Input = styled.input`
+  margin-top: 3rem;
+  width: 100%;
+  border: 1px solid #ffffff;
+  background-color: #ffffff;
+  font-size: 1.5rem;
+  color: black;
+  border-radius: 25px;
+  padding: 10px 15px 10px 40px;
 
   &:focus {
-    border: 2px solid #75bcce;
+    border: 1px solid #75bcce;
   }
+`;
+
+export const SearchIcon = styled.span`
+  display: block;
+  position: absolute;
+  left: 22px;
+  transform: translate(-50%, -50%);
+  height: 14px;
+  width: 14px;
+  font-size: 14px;
+  color: #c5c5c5;
+  background-image: url(${({ iconSrc }) => iconSrc});
+  top: 4.5rem;
 `;

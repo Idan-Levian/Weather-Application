@@ -1,6 +1,6 @@
 import React from 'react';
-import Cloud from '../assets/icons/Cloud';
-import Sun from '../assets/icons/Sun';
+import Cloud from '../../assets/icons/Cloud';
+import Sun from '../../assets/icons/Sun';
 import * as S from './styled';
 
 const dropsPrinter = (runner) => {

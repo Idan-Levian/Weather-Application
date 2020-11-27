@@ -17,6 +17,7 @@
 # General
 /.vscode
 /Mookup.jpeg
+/desktop.ini
 
 # misc
 .DS_Store

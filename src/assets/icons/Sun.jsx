@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Cloud = () => {
+const Sun = () => {
   return (
     <svg
       version='1.1'
@@ -69,4 +69,4 @@ const Cloud = () => {
   );
 };
 
-export default Cloud;
+export default Sun;

@@ -1,20 +1,20 @@
 import React from 'react';
 import * as S from './style';
 
+import iconSrc from '../../assets/images/searchIcon.png';
+
 const SearchBar = ({ placeholder, onClick, value, onChange }) => {
   return (
-    <div className='ui search category focus '>
-      <div className='ui left icon input'>
-        <S.Input
-          type='text'
-          onClick={onClick}
-          value={value}
-          placeholder={placeholder}
-          onChange={onChange}
-        />
-        <i className='search icon'></i>
-      </div>
-    </div>
+    <S.SearchBar>
+      <S.Input
+        type='text'
+        onClick={onClick}
+        value={value}
+        placeholder={placeholder}
+        onChange={onChange}
+      />
+      <S.SearchIcon iconSrc={iconSrc} />
+    </S.SearchBar>
   );
 };
 
