@@ -1,9 +1,9 @@
 import React from 'react';
 import * as S from './style';
 
-const Backdrop = ({ color, opacity, children, width }) => {
+const Backdrop = ({ color, opacity, children, width, height }) => {
   return (
-    <S.Backdrop opacity={opacity} width={width} color={color}>
+    <S.Backdrop opacity={opacity} width={width} height={height} color={color}>
       {children}
     </S.Backdrop>
   );

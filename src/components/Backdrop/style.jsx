@@ -6,17 +6,20 @@ const bgColorHelper = (color) => {
     ? color.slice(0, 1) === '#'
       ? colorConvert.hex.rgb(color).toString()
       : colorConvert.keyword.rgb(color).toString()
-    : colorConvert.keyword.rgb('gray').toString();
+    : '255, 255, 255';
 };
 
 export const Backdrop = styled.div`
-  position: relative;
   display: flex;
   flex-direction: column;
-  width: ${({ width }) => (width ? width : '100%')};
-  border: 1px solid black;
+  justify-content: center;
+  width: ${({ width }) => width || '100%'};
+  height: ${({ height }) => height || '100%'};
   background: rgba(
     ${({ color }) => bgColorHelper(color)},
-    ${({ opacity }) => (opacity ? opacity : '1')}
+    ${({ opacity }) => opacity || '0.2'}
   );
+  padding: 10px 0;
+  margin: 20px 0;
+  border-radius: 10px;
 `;

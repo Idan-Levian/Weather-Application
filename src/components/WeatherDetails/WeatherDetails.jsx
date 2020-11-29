@@ -1,13 +1,12 @@
 import React from 'react';
 import * as S from './style';
 
-/* Import Components */
 import Backdrop from '../Backdrop';
 import Subtitle from '../Subtitle';
 
-const WeatherDetails = () => {
+const WeatherDetails = ({ opacity, color }) => {
   return (
-    <Backdrop opacity='0.15' color='gray' width='50%'>
+    <Backdrop opacity={opacity} color={color}>
       <S.UL>
         <S.LI>
           <Subtitle text='6&deg;' />

@@ -1,34 +1,19 @@
 import React from 'react';
 import * as S from './style';
 
-/* Import Components */
 import Title from '../Title';
 import Subtitle from '../Subtitle';
-import Icon from '../Icon';
+import Cloud from '../../assets/icons/Cloud';
 
-const CurrentWeather = ({
-  headerTitleText,
-  headerSubtitleText,
-  src,
-  bodyTitleText,
-  bodySubtitleText,
-  width,
-  height,
-}) => {
+const CurrentWeather = ({ bodyTitleText, bodySubtitleText }) => {
   return (
     <S.CurrentWeatherContainer>
-      <S.CurrentWeatherHeader>
-        <Title text={headerTitleText} />
-        <Subtitle text={headerSubtitleText} />
-      </S.CurrentWeatherHeader>
       <S.CurrentWeatherBody>
-        <div>
+        <Cloud />
+        <S.TitleBox>
           <Title text={bodyTitleText} />
           <Subtitle text={bodySubtitleText} />
-        </div>
-        <div>
-          <Icon width={width} height={height} src={src} />
-        </div>
+        </S.TitleBox>
       </S.CurrentWeatherBody>
     </S.CurrentWeatherContainer>
   );

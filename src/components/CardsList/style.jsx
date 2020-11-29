@@ -1,10 +1,26 @@
 import styled from 'styled-components';
 
 export const List = styled.div`
-  border: 0.1rem solid black;
-  padding: 1rem;
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  overflow-x: scroll;
+  overflow-y: hidden;
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
 `;
 
 export const ListTitle = styled.div`
@@ -12,5 +28,5 @@ export const ListTitle = styled.div`
 `;
 
 export const CardsList = styled.div`
-  max-width: 100%;
+  flex-grow: 1;
 `;

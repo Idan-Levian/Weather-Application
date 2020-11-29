@@ -60,7 +60,6 @@ export const Rain = styled.div`
 `;
 
 export const Text = styled.div`
-  font-family: Helvetica, 'Helvetica Neue', sans-serif;
   letter-spacing: 1px;
   text-align: center;
   margin-left: -43px;

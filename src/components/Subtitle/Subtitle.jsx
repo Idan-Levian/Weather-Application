@@ -1,9 +1,9 @@
 import React from 'react';
 import * as S from './style';
 
-const Subtitle = ({ size, text, color = '#a3a09b' }) => {
+const Subtitle = ({ size, text, color, align }) => {
   return (
-    <S.Subtitle color={color} size={size}>
+    <S.Subtitle align={align} color={color} size={size}>
       {text}
     </S.Subtitle>
   );

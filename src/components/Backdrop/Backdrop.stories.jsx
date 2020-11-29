@@ -11,6 +11,6 @@ export default {
 const Template = (args) => <Backdrop {...args} />;
 export const Default = Template.bind({});
 Default.args = {
-  color: 'lightgray',
+  // color: 'lightgray',
   opacity: 0.2,
 };
