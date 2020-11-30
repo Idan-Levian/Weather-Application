@@ -3,8 +3,8 @@ export default {
   weather: {
     base: 'http://api.openweathermap.org/data/2.5',
     forecast: (query) =>
-      `/forecast/climate?q=${query}&appid=${process.env.REACT_APP_API_KEY}&units=metric`,
+      `/onecall?${query}&units=metric&appid=${process.env.REACT_APP_API_KEY}`,
     current: (query) =>
-      `/weather?q=${query}&appid=${process.env.REACT_APP_API_KEY}&units=metric`,
+      `/weather?q=${query}&units=metric&appid=${process.env.REACT_APP_API_KEY}`,
   },
 };

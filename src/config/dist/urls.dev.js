@@ -10,10 +10,10 @@ var _default = {
   weather: {
     base: 'http://api.openweathermap.org/data/2.5',
     forecast: function forecast(query) {
-      return "/forecast/climate?q=".concat(query, "&appid=").concat(process.env.REACT_APP_API_KEY, "&units=metric");
+      return "/onecall?".concat(query, "&units=metric&appid=").concat(process.env.REACT_APP_API_KEY);
     },
     current: function current(query) {
-      return "/weather?q=".concat(query, "&appid=").concat(process.env.REACT_APP_API_KEY, "&units=metric");
+      return "/weather?q=".concat(query, "&units=metric&appid=").concat(process.env.REACT_APP_API_KEY);
     }
   }
 };
