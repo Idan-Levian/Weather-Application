@@ -8,10 +8,11 @@
     "@testing-library/user-event": "^12.2.2",
     "axios": "^0.21.0",
     "color-convert": "^2.0.1",
+    "dotenv": "^8.2.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.0",
-    "storybook": "^6.1.7",
+    "storybook": "^6.1.9",
     "styled-components": "^5.2.1",
     "web-vitals": "^0.2.4"
   },
@@ -43,12 +44,12 @@
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
-    "@storybook/addon-actions": "^6.1.7",
-    "@storybook/addon-essentials": "^6.1.7",
-    "@storybook/addon-links": "^6.1.7",
-    "@storybook/node-logger": "^6.1.7",
+    "@storybook/addon-actions": "^6.1.9",
+    "@storybook/addon-essentials": "^6.1.9",
+    "@storybook/addon-links": "^6.1.9",
+    "@storybook/node-logger": "^6.1.9",
     "@storybook/preset-create-react-app": "^3.1.5",
-    "@storybook/react": "^6.1.7",
+    "@storybook/react": "^6.1.9",
     "react-is": "^17.0.1"
   }
 }

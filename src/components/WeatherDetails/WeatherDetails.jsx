@@ -4,32 +4,41 @@ import * as S from './style';
 import Backdrop from '../Backdrop';
 import Subtitle from '../Subtitle';
 
-const WeatherDetails = ({ opacity, color }) => {
+const WeatherDetails = ({
+  hight,
+  low,
+  wind,
+  rain,
+  sunrise,
+  sunset,
+  opacity,
+  color,
+}) => {
   return (
     <Backdrop opacity={opacity} color={color}>
       <S.UL>
         <S.LI>
-          <Subtitle text='6&deg;' />
+          <Subtitle text={hight} />
           <Subtitle text='Hight' />
         </S.LI>
         <S.LI>
-          <Subtitle text='3&deg;' />
+          <Subtitle text={low} />
           <Subtitle text='Low' />
         </S.LI>
         <S.LI>
-          <Subtitle text='3.1mph' />
+          <Subtitle text={wind} />
           <Subtitle text='Wind' />
         </S.LI>
         <S.LI>
-          <Subtitle text='70%' />
+          <Subtitle text={rain} />
           <Subtitle text='Rain' />
         </S.LI>
         <S.LI>
-          <Subtitle text='6:40' />
+          <Subtitle text={sunrise} />
           <Subtitle text='Sunrise' />
         </S.LI>
         <S.LI>
-          <Subtitle text='7:19' />
+          <Subtitle text={sunset} />
           <Subtitle text='Sunset' />
         </S.LI>
       </S.UL>
