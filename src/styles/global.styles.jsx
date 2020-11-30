@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import backgroundIMG from '../assets/images/background.jpg';
 
 const GlobalStyle = createGlobalStyle`
     * {
@@ -10,6 +11,16 @@ const GlobalStyle = createGlobalStyle`
 
     body{
         min-height:100hv;
+        background-image: url(${backgroundIMG});
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        background-attachment: fixed;
+
+  @media only screen and (max-width: 890px) {
+    height: 150vh;
+    object-fit: contain;
+  }
     }
 `;
 

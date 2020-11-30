@@ -3,13 +3,14 @@ import React from 'react';
 import * as S from './style';
 import backgroundImage from '../../assets/images/background.jpg';
 import SearchBar from '../../components/SearchBar';
-import CurrentWeather from '../../components/CurrentWeather';
-import WeatherDetails from '../../components/WeatherDetails';
+// import CurrentWeather from '../../components/CurrentWeather';
+// import WeatherDetails from '../../components/WeatherDetails';
 import CardsList from '../../components/CardsList';
 
 import GlobalStyle from '../../styles/global.styles';
-import Title from '../../components/Title';
-import Subtitle from '../../components/Subtitle';
+// import Title from '../../components/Title';
+// import Subtitle from '../../components/Subtitle';
+import CurrentWeatherContainer from '../../containers/CurrentWeatherContainer/CurrentWeatherContainer';
 
 const Homepage = () => {
   return (
@@ -23,7 +24,9 @@ const Homepage = () => {
           </S.HeaderWrapper>
         </S.Header>
 
-        <S.Main>
+        <CurrentWeatherContainer />
+
+        {/* <S.Main>
           <S.CurrentWeatherHeader>
             <Title text='Tel Aviv, IL' />
             <Subtitle text='Friday 27 Nov' />
@@ -36,7 +39,7 @@ const Homepage = () => {
           <S.MainDetailsWrapper>
             <WeatherDetails />
           </S.MainDetailsWrapper>
-        </S.Main>
+        </S.Main> */}
 
         <div>
           <CardsList listTitle='Forecast' />

@@ -1,16 +1,6 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
-  background-image: url(${(props) => props.imgSrc});
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  background-attachment: fixed;
-  @media only screen and (max-width: 890px) {
-    height: 150vh;
-    object-fit: contain;
-  }
-`;
+export const Container = styled.div``;
 export const Wrapper = styled.div`
   margin: 0 auto;
   height: calc(100vh - 4rem);

@@ -1,15 +1,17 @@
 import React from 'react';
-import SearchBar from './SearchBar/SearchBar';
-import Title from './Title/Title';
+// import SearchBar from './SearchBar/SearchBar';
+// import Title from './Title/Title';
 
-import GlobalStyle from '../styles/global.styles';
+// import GlobalStyle from '../styles/global.styles';
+import Homepage from '../views/Homepage';
 
 const App = () => {
   return (
     <div>
-      <GlobalStyle />
+      <Homepage />
+      {/* <GlobalStyle />
       <SearchBar />
-      <Title />
+      <Title /> */}
     </div>
   );
 };
