@@ -1,20 +1,15 @@
 import React from 'react';
 
 import * as S from './style';
-import backgroundImage from '../../assets/images/background.jpg';
 import SearchBar from '../../components/SearchBar';
-// import CurrentWeather from '../../components/CurrentWeather';
-// import WeatherDetails from '../../components/WeatherDetails';
-import CardsList from '../../components/CardsList';
 
 import GlobalStyle from '../../styles/global.styles';
-// import Title from '../../components/Title';
-// import Subtitle from '../../components/Subtitle';
 import CurrentWeatherContainer from '../../containers/CurrentWeatherContainer/CurrentWeatherContainer';
+import ForecastContainer from '../../containers/ForecastContainer/ForecastContainer';
 
 const Homepage = () => {
   return (
-    <S.Container imgSrc={backgroundImage}>
+    <S.Container>
       <S.HomepageTitle>Weather App</S.HomepageTitle>
       <S.Wrapper>
         <GlobalStyle />
@@ -23,27 +18,8 @@ const Homepage = () => {
             <SearchBar placeholder='Tel Aviv' />
           </S.HeaderWrapper>
         </S.Header>
-
         <CurrentWeatherContainer />
-
-        {/* <S.Main>
-          <S.CurrentWeatherHeader>
-            <Title text='Tel Aviv, IL' />
-            <Subtitle text='Friday 27 Nov' />
-          </S.CurrentWeatherHeader>
-
-          <S.MainCurrentWrapper>
-            <CurrentWeather bodyTitleText='105°' bodySubtitleText='Super Hot' />
-          </S.MainCurrentWrapper>
-
-          <S.MainDetailsWrapper>
-            <WeatherDetails />
-          </S.MainDetailsWrapper>
-        </S.Main> */}
-
-        <div>
-          <CardsList listTitle='Forecast' />
-        </div>
+        <ForecastContainer />
       </S.Wrapper>
     </S.Container>
   );
