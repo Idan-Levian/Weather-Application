@@ -1,18 +1,12 @@
 import React from 'react';
-// import SearchBar from './SearchBar/SearchBar';
-// import Title from './Title/Title';
-
-// import GlobalStyle from '../styles/global.styles';
+import { WeatherContextProvider } from '../contexts/weatherContext';
 import Homepage from '../views/Homepage';
 
 const App = () => {
   return (
-    <div>
+    <WeatherContextProvider>
       <Homepage />
-      {/* <GlobalStyle />
-      <SearchBar />
-      <Title /> */}
-    </div>
+    </WeatherContextProvider>
   );
 };
 

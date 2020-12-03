@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import urls from '../../config/urls';
 import { openWeatherMapAPI } from '../../services/axiosService';
 
@@ -9,16 +9,24 @@ import Title from '../../components/Title';
 import Subtitle from '../../components/Subtitle';
 import * as S from '../../views/Homepage/style';
 
+import { WeatherContext } from '../../contexts/weatherContext';
+
 const CurrentWeatherContainer = () => {
-  // TODO: Add city arg from user input (search bar)
+  const weatherContextValue = useContext(WeatherContext);
+
   const [currentDetails, setCurrentDetails] = useState();
 
   const getCurrentWeather = async () => {
-    const url = urls.weather.current('tel aviv'); // TODO: Change the city to dynamic input from user.
+    const url = urls.weather.current(weatherContextValue.result.city);
     try {
       const { data } = await openWeatherMapAPI.get(url);
       console.log('data -> ', data);
       setCurrentDetails(data);
+      weatherContextValue.setResult({
+        ...weatherContextValue.result,
+        lat: data.coord.lat,
+        lon: data.coord.lon,
+      });
     } catch (error) {
       console.error({ error: error.message });
     }
@@ -27,8 +35,9 @@ const CurrentWeatherContainer = () => {
   useEffect(() => {
     setTimeout(() => {
       getCurrentWeather();
-    });
-  }, []);
+      console.log('checker ', weatherContextValue.result);
+    }, 2000);
+  }, [weatherContextValue.result.city]);
 
   if (!currentDetails) {
     return (

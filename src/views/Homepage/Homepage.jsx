@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 
 import * as S from './style';
 
@@ -7,11 +7,22 @@ import CurrentWeatherContainer from '../../containers/CurrentWeatherContainer/Cu
 import ForecastContainer from '../../containers/ForecastContainer/ForecastContainer';
 import SearchbarContainer from '../../containers/SearchbarContainer/SearchbarContainer';
 
-import { WeatherContextProvider } from '../../contexts/weatherContext';
+import { WeatherContext } from '../../contexts/weatherContext';
 
 const Homepage = () => {
-  return (
-    <WeatherContextProvider>
+  const weatherContextValue = useContext(WeatherContext);
+  if (weatherContextValue.result.city === '') {
+    return (
+      <S.Container>
+        <S.HomepageTitle>Weather App</S.HomepageTitle>
+        <S.Wrapper>
+          <GlobalStyle />
+          <SearchbarContainer />
+        </S.Wrapper>
+      </S.Container>
+    );
+  } else {
+    return (
       <S.Container>
         <S.HomepageTitle>Weather App</S.HomepageTitle>
         <S.Wrapper>
@@ -21,8 +32,8 @@ const Homepage = () => {
           <ForecastContainer />
         </S.Wrapper>
       </S.Container>
-    </WeatherContextProvider>
-  );
+    );
+  }
 };
 
 export default Homepage;
