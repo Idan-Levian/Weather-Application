@@ -12,12 +12,21 @@ const SearchbarContainer = () => {
   const onChangeHandler = (e) => {
     setValue(e.target.value);
   };
+
   const onSubmitHandler = (e) => {
     e.preventDefault();
   };
 
   useEffect(() => {
-    weatherContextValue.setResult(value);
+    const timeOutId = setTimeout(() => {
+      weatherContextValue.setResult({
+        ...weatherContextValue.result,
+        city: value,
+      });
+    }, 700);
+    return () => {
+      clearTimeout(timeOutId);
+    };
   }, [value]);
 
   return (

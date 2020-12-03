@@ -42,7 +42,7 @@ export const Rain = styled.div`
   width: 70px;
   height: 70px;
   margin-top: -32px;
-  margin-left: 19px;
+  margin-left: 70px;
 
   /* ${({ children }) => {
     let str = '';
@@ -62,26 +62,26 @@ export const Rain = styled.div`
 export const Text = styled.div`
   letter-spacing: 1px;
   text-align: center;
-  margin-left: -43px;
+  margin-left: -30px;
   font-weight: bold;
   margin-top: 20px;
-  font-size: 11px;
+  font-size: 17px;
   color: #a0a0a0;
-  width: 200px;
+  width: 300px;
 `;
 
 export const WeatherLoading = styled.div`
   position: absolute;
-  margin-left: -55px;
-  margin-top: -100px;
+  margin-left: -139px;
+  margin-top: -263px;
   height: 110px;
   width: 110px;
   left: 50%;
   top: 50%;
 
   svg {
-    width: 110px;
-    height: 110px;
+    width: 220px;
+    height: 220px;
   }
 
   path {
@@ -103,10 +103,10 @@ export const WeatherLoading = styled.div`
     margin-left: -10px;
     margin-top: 6px;
     opacity: 0;
-    width: 60px;
-    height: 60px;
+    width: 120px;
+    height: 120px;
     position: absolute;
-    left: 45px;
+    left: 90px;
     top: 15px;
     z-index: 1;
 
