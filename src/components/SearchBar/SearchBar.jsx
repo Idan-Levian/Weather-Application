@@ -3,15 +3,19 @@ import * as S from './style';
 
 import iconSrc from '../../assets/images/searchIcon.png';
 
-const SearchBar = ({ placeholder, onClick, value, onChange }) => {
+const SearchBar = ({
+  placeholder,
+  onChangeHandler,
+  value,
+  onSubmitHandler,
+}) => {
   return (
-    <S.SearchBar>
+    <S.SearchBar onSubmit={onSubmitHandler}>
       <S.Input
         type='text'
-        onClick={onClick}
+        onChange={onChangeHandler}
         value={value}
         placeholder={placeholder}
-        onChange={onChange}
       />
       <S.SearchIcon iconSrc={iconSrc} />
     </S.SearchBar>
