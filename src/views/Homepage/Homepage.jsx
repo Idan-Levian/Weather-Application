@@ -12,6 +12,7 @@ import { WeatherContext } from '../../contexts/weatherContext';
 const Homepage = () => {
   const weatherContextValue = useContext(WeatherContext);
   if (weatherContextValue.result.city === '') {
+    // TODO : Refactor if state
     return (
       <S.Container>
         <S.HomepageTitle>Weather App</S.HomepageTitle>

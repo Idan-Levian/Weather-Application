@@ -19,6 +19,7 @@ const SearchbarContainer = () => {
 
   useEffect(() => {
     const timeOutId = setTimeout(() => {
+      // TODO: Create Debounce component
       weatherContextValue.setResult({
         ...weatherContextValue.result,
         city: value,
