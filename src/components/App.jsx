@@ -7,7 +7,9 @@ require('dotenv').config();
 const App = () => {
   return (
     <WeatherContextProvider>
-      <Homepage />
+      <WeatherContextProvider>
+        <Homepage />
+      </WeatherContextProvider>
     </WeatherContextProvider>
   );
 };

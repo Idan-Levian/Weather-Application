@@ -5,6 +5,7 @@ const initState = {
   lat: 0,
   lon: 0,
   errors: false,
+  errorCode: 0,
 };
 
 export const WeatherContext = React.createContext(initState);
