@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useContext } from 'react';
 import urls from '../../config/urls';
+import errors from '../../config/errors';
 import { openWeatherMapAPI } from '../../services/axiosService';
 
 import Loader from '../../components/WeatherLoading';
@@ -7,6 +8,7 @@ import CurrentWeather from '../../components/CurrentWeather';
 import WeatherDetails from '../../components/WeatherDetails';
 import Title from '../../components/Title';
 import Subtitle from '../../components/Subtitle';
+import Error from '../../components/Error';
 import * as S from '../../views/Homepage/style';
 
 import { WeatherContext } from '../../contexts/weatherContext';
@@ -28,6 +30,11 @@ const CurrentWeatherContainer = () => {
         lon: data.coord.lon,
       });
     } catch (error) {
+      weatherContextValue.setResult({
+        ...weatherContextValue.result,
+        errorCode: error.response.status,
+      });
+      console.log('error', error.response);
       console.error({ error: error.message });
     }
   };
@@ -40,7 +47,15 @@ const CurrentWeatherContainer = () => {
   }, [weatherContextValue.result.city]);
 
   if (!currentDetails) {
-    return (
+    return weatherContextValue.result.errorCode ? (
+      errors.map((error) => {
+        return error.code === weatherContextValue.result.errorCode ? (
+          <Error key={error.code} error={error.message} />
+        ) : (
+          ''
+        );
+      })
+    ) : (
       <Loader
         text='LOOKING OUTSIDE FOR YOU... ONE SEC'
         cloudColor='lightyellow'
