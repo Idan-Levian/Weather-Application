@@ -11,14 +11,13 @@ const SearchBar = ({
 }) => {
   return (
     <S.SearchBar onSubmit={onSubmitHandler}>
-      <label htmlFor='searchBar'>
-        <S.Input
-          type='text'
-          onChange={onChangeHandler}
-          value={value}
-          placeholder={placeholder}
-        />
-      </label>
+      <S.Label htmlFor='search Bar'>Search Bar</S.Label>
+      <S.Input
+        type='text'
+        onChange={onChangeHandler}
+        value={value}
+        placeholder={placeholder}
+      />
       <S.SearchIcon iconSrc={iconSrc} />
     </S.SearchBar>
   );
